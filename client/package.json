@@ -1,0 +1,58 @@
+{
+  "name": "blog-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@craco/craco": "^6.4.5",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.3",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.8",
+    "antd": "^4.24.1",
+    "axios": "^1.1.3",
+    "craco-antd": "^2.0.0",
+    "less": "^4.1.3",
+    "less-loader": "^11.1.0",
+    "nprogress": "^0.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.4.3",
+    "react-scripts": "5.0.1",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.2",
+    "typescript": "^4.8.4",
+    "web-vitals": "^2.1.4",
+    "yarn": "^1.22.19"
+  },
+  "scripts": {
+    "start": "craco  start",
+    "build": "craco  build",
+    "test": "craco  test",
+    "eject": "craco  eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "main": "index.js",
+  "author": "zhanglifan <2830164237@qq.com>",
+  "license": "MIT"
+}

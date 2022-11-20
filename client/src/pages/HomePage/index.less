@@ -1,0 +1,69 @@
+@import '~antd/dist/antd.css';
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+       .root-layout {  padding: 0 0;}
+}
+ 
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+      .root-layout {  padding: 0 50px;}
+} 
+ 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+       .root-layout {  padding: 0 100px;}
+} 
+ 
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .root-layout {  padding: 0 150px;}
+}
+.root-layout{
+  height: 100vh;
+}
+//当屏幕为手机时 layout还原默认响应式效果
+.ant-layout-sider-to{
+  transition: none;
+}
+#components-layout-demo-responsive .logo {
+  height: 32px;
+  margin: 16px;
+  background: #fff;
+}
+.site-layout-sub-header-background {
+  background: #fff;
+  display: flex;
+}
+
+.site-layout-background {
+  background: #fff;
+}
+.ant-layout-header{
+  background-color: #02020e;
+  color: #fff;
+  height: 50px !important;
+  line-height: 50px !important;
+}
+//修改tiger位置
+.ant-layout-sider-zero-width-trigger{
+  position:fixed;
+  top: 0;
+  left: 0;
+  margin-left: 3px;
+  margin-top: 4px;
+  line-height: 50px;
+  z-index: 999;
+}
+//选中后内容
+// #ececec
+//中间内容
+.ant-layout-sider{
+    .ant-menu{
+         li{
+            color: #777777  !important;
+         }
+  }
+    
+}
+
+

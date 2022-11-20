@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.009f6f03.css",
+    "main.js": "/static/js/main.a23d4695.js",
+    "static/js/787.ce43ad27.chunk.js": "/static/js/787.ce43ad27.chunk.js",
+    "static/media/云朵.jpeg": "/static/media/云朵.22194dfa0a9101f86fbf.jpeg",
+    "index.html": "/index.html",
+    "main.009f6f03.css.map": "/static/css/main.009f6f03.css.map",
+    "main.a23d4695.js.map": "/static/js/main.a23d4695.js.map",
+    "787.ce43ad27.chunk.js.map": "/static/js/787.ce43ad27.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.009f6f03.css",
+    "static/js/main.a23d4695.js"
+  ]
+}

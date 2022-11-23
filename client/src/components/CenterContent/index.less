@@ -1,0 +1,50 @@
+
+.ant-carousel .slick-prev,
+.ant-carousel .slick-next,
+.ant-carousel .slick-prev:hover,
+.ant-carousel .slick-next:hover,
+.ant-carousel .slick-prev:focus,
+.ant-carousel .slick-next:focus {
+  font-size: inherit;
+  color: currentColor !important;
+}
+
+.ant-carousel .slick-prev::before {
+  color: currentColor !important;
+}
+
+.slick-arrow.slick-prev {
+  left: 10px;
+  z-index: 2;
+  font-size: 20px !important;
+}
+
+.ant-carousel .slick-next::before {
+  color: currentColor !important;
+}
+
+.slick-arrow.slick-next {
+  right: 10px;
+  z-index: 2;
+  font-size: 20px !important;
+}
+
+.content_button{
+  position: relative;
+  button:nth-child(1){
+    height: 30px;
+    z-index: 2;
+    position:absolute;
+    transform: translateY(-15px);
+    top: 50%;
+    left: 0;
+  }
+  button:nth-child(2){
+    height: 30px;
+    z-index: 2;
+    position:absolute;
+    top: 50%;
+    transform: translateY(-15px);
+    right: 0;
+  }
+}

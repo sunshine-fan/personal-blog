@@ -3,7 +3,7 @@
 import {legacy_createStore,combineReducers,compose, applyMiddleware} from "redux";
 import reduxThunk from "redux-thunk"
 import ArrStatusReducer from "./ArrStatus/reducer"
-import HomePageReducer from "./HomePageStatus/reducer"
+import HomePageReducer from "./CategoryStatus/reducer"
 
 //组合各个模块的reducer
 const reducers = combineReducers({

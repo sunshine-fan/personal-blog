@@ -10,6 +10,7 @@ const App: React.FC = function () {
       {/* <Link to={"/home/content"}>home</Link> */}
       {/* 解决路由懒加载问题  未加载为loading*/}
       {/* {element} */}
+      {/* <HistoryRoute></HistoryRoute> */}
       <Suspense fallback={<div>Loading...</div>}>{element}</Suspense>
     </>
   )

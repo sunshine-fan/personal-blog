@@ -1,7 +1,7 @@
 import HomePage from "./index"
 // 管理数据
 // dispatch时 会出发下面reducer函数  dispatch 中的参数传递给第二个参数
-let reducer = (state = {...HomePage.state},action:ActionType)=>{
+let reducer = (state = {...HomePage.state},action)=>{
   let newState = JSON.parse(JSON.stringify(state))
   console.log("调用HomePage模块reducer");
   // 每一次写一个方法都不要手动添加case

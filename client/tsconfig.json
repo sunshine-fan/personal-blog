@@ -1,4 +1,5 @@
-{
+{ 
+  "extends":"./paths.json",
   "compilerOptions": {
     "target": "es5",
     "lib": [
@@ -6,6 +7,7 @@
       "dom.iterable",
       "esnext"
     ],
+    // "allowUnreachableCode":"true",
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -18,14 +20,12 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react",
   },
+
   "include": [
-    "router"
+    "router",
   ],
-  // "baseUrl": ".",
-  // //在组件中就可以使用@时过来提示文件
-  // "paths": {
-  //     "@/*":["./src/*"]
-  // }
+
+ "exclude": ["node_modules", "dist", "build","**/*.js"],
 }

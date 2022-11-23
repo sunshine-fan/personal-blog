@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react"
 import { Layout, Menu } from "antd"
 import { Outlet } from "react-router-dom"
-// import { NavLink, Navigate, Outlet } from "react-router-dom"
 import HeadContent from "../../components/HeadContent"
 import useWindowSize from "../../utils/useWindowSize"
 import MENU_CONTENT from "../../constants"
 
 import SiderLeft from "../../components/SiderLeft"
 import SiderRight from "../../components/SiderRight"
-import HomePageStatus from "../../store/HomePageStatus"
+import HomePageStatus from "../../store/CategoryStatus"
 //使用路由
 import "./index.less"
 //通过 useSelector 获取仓库数据（可以直接修改）

@@ -7,7 +7,6 @@ import MENU_CONTENT from "../../constants"
 
 import SiderLeft from "../../components/SiderLeft"
 import SiderRight from "../../components/SiderRight"
-import HomePageStatus from "../../store/CategoryStatus"
 //使用路由
 import "./index.less"
 //通过 useSelector 获取仓库数据（可以直接修改）
@@ -29,10 +28,6 @@ const HomePage: React.FC = function () {
   const { width } = useWindowSize()
   //header组件中content是否显示 默认PC
   const [isshow, setIsshow] = useState<Boolean>(true)
-  useEffect(() => {
-    dispatch(HomePageStatus.asyncActions.getCategoryList)
-    dispatch(HomePageStatus.asyncActions.getBlogList)
-  }, [list])
   useEffect(() => {
     width < 768 ? setIsshow(false) : setIsshow(true)
   }, [width])

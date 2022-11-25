@@ -18,6 +18,7 @@ const request = axios.create({
 
 request.interceptors.request.use(
   (config) => {
+     config.headers['token'] = '5ec24816-55fc-4422-8375-f449bc13748d'; 
     // 对config做一些处理
     // 1.发送网络请求时, 在界面的中间位置显示Loading的组件
     NProgress.start();

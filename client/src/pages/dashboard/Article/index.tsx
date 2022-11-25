@@ -40,11 +40,6 @@ const columns: ColumnsType<DataType> = [
     dataIndex: "age",
     key: "age",
   },
-  // {
-  //   title: "内容",
-  //   dataIndex: "age",
-  //   key: "content",
-  // },
   {
     title: "操作",
     key: "action",

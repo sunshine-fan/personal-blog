@@ -31,17 +31,12 @@ function getItem(
 }
 
 const items: MenuItem[] = [
+  // getItem("设置", "1", <FileOutlined />),
   getItem("仪表盘", "/back/dashboard", <PieChartOutlined />),
-  getItem("博文", "/back/article", <DesktopOutlined />),
-  // getItem("博文分类", "sub1", <UserOutlined />, [
-  //   getItem("Tom", "3"),
-  //   getItem("Bill", "4"),
-  //   getItem("Alex", "5"),
-  // ]),
-  // getItem("用户管理", "sub2", <TeamOutlined />, [
-  //   getItem("Team 1", "6"),
-  //   getItem("Team 2", "8"),
-  // ]),
+  getItem("博文分类", "/", <UserOutlined />, [
+    getItem("博文列表", "/back/list"),
+    getItem("添加博文", "/back/compile"),
+  ]),
   getItem("分类管理", "/back/category", <FileOutlined />),
 ]
 

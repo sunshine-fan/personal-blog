@@ -5,7 +5,9 @@ import request from '../utils/request';
  * @param data 
  * @returns 
  */
-export const BlogList = async (data: {
+export const getBlogList = async (data: {
+  keyword: string;
+  categoryId: number;
   page: string|number;
   pageSize: string|number;
 }) => {
@@ -17,8 +19,10 @@ export const BlogList = async (data: {
  * @param data 
  * @returns 
  */
-export const AddCategorys = async (data:{
-  name:string
+export const AddArticle = async (data:{
+  title:string;
+  categoryId:string;
+  content:string
 }) => {
   return await request.post("/blog/_token/add",data);
 };
@@ -27,11 +31,11 @@ export const AddCategorys = async (data:{
  * @param id 
  * @returns 
  */
-export const toUpdate = async (id:number|string) => {
-  return await request.post("/blog/detail?id"+id);
-};
+// export const toUpdate = async (id:number|string) => {
+//   return await request.post("/blog/detail?id"+id);
+// };
 
-export const Update = async (updateArticle:{
+export const UpdateArticle = async (updateArticle:{
   id:number|string,
   title:number|string,
   content:number|string,
@@ -45,6 +49,6 @@ export const Update = async (updateArticle:{
  * @param id 删除文章 软删除
  * @returns 
  */
-export const UpdateCategorys = async (id:number|string) => {
-  return await request.post("/blog/detail?id"+id);
+export const deleteArticle = async (id:number|string) => {
+  return await request.delete("/blog/_token/delete?id="+id);
 };

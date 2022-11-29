@@ -1,53 +1,59 @@
 import * as actionTypes from "./constants";
 import {
-  getCategoryList,
-  deleteCategory,
-  updateCategory,
-  AddCategory
-} from "../../services/Category"
-//更新分裂列表数据
-const changeCategoryAction = (res) => {
-  const data = res.rows
+  getBlogList,
+  AddArticle,
+  UpdateArticle,
+  deleteArticle,
+  
+} from "../../services/Article"
+//更新文章列表数据
+const changeArticleAction = (res) => {
+  const data = res.data.rows
   data?.map((item,index)=>{
-    item.key = item.name
+    item.key = item.title
     item.uuid = index+1
+    item.content = item.content+"..."
+    //时间戳
+    let d = new Date(parseInt(item.create_time))
+    item.create_time = `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日`
     return item 
   })
+  console.log(data);
   return {
-    type: actionTypes.CHANGE_CATEGORY_LIST,
-    CategoryList: res.rows
+    type: actionTypes.CHANGE_BLOG_LIST,
+    blogList: data
   }
 }
 //redux-thunk 调用异步请求
-export const get=()=>{
+export const get=(data)=>{
   return async dispatch=>{
-    const res = await getCategoryList()
+    const res = await getBlogList(data)
     //reducer调用同步,并且更新数据
-    dispatch(changeCategoryAction(res));
+    dispatch(changeArticleAction(res));
   }
 }
-// 删除分类
+// 删除文章
 export const del = (id:number) => {
   return async dispatch => {
-    await deleteCategory(id)
-    const res = await getCategoryList()
-    dispatch(changeCategoryAction(res))
+    await deleteArticle(id)
+    const res = await getBlogList({})
+    dispatch(changeArticleAction(res))
   }
 }
-// 修改分类
+// 修改文章
 export const change = (data:{id:number,name:string}) => {
   return async dispatch => {
-    await updateCategory(data)
+    await UpdateArticle(data)
     //reducer 调用同步
-    const res = await getCategoryList()
-    dispatch(changeCategoryAction(res));
+    // const res = await getBlogList()
+    // dispatch(changeCategoryAction(res));
   }
 }
-//增加分类
+//增加文章
 export const add = (data:{name:string}) => {
    return async dispatch => {
-    await AddCategory(data)
-    const res = await getCategoryList()
-    dispatch(changeCategoryAction(res));
+    await AddArticle(data)
+    // const res = await getBlogList()
+    // dispatch(changeCategoryAction(res));
   }
 }

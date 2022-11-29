@@ -15,13 +15,16 @@ const changeCategoryAction = (res) => {
   })
   return {
     type: actionTypes.CHANGE_CATEGORY_LIST,
-    CategoryList: res.rows
+    CategoryList: data
   }
 }
 //redux-thunk 调用异步请求
 export const get=()=>{
   return async dispatch=>{
     const res = await getCategoryList()
+    console.log("是否拿到数据");
+    console.log(res);
+    
     //reducer调用同步,并且更新数据
     dispatch(changeCategoryAction(res));
   }

@@ -1,1 +1,1 @@
-export const CHANGE_BLOG_LIST = "article/CHANGE_BLOG_LIST"
+export const CHANGE_BLOG_LIST = "article/CHANGE_BLOG_LIST";

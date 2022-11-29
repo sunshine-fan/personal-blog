@@ -62,7 +62,7 @@ router.get("/search", async (req, res) => {
   }
 
   //查分页数据
-  let searchSql = " SELECT `id`,`category_id`,`create_time`,`title`,substr(`content`,0,50) AS `content` FROM `blog` " + whereSqlStr + " ORDER BY `create_time` DESC LIMIT ?,? "
+  let searchSql = " SELECT `id`,`category_id`,`create_time`,`title`,left(`content`,50) AS `content` FROM `blog` " + whereSqlStr + " ORDER BY `create_time` DESC LIMIT ?,? "
   // 1 10  2,10    3,5
   // 0,10  10,10   10,5
   //参数不能为string类型

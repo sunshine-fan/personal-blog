@@ -8,7 +8,11 @@ const Detail = lazy(() => import("../pages/Detail"))
 const CenterContent = lazy(() => import("../components/CenterContent"))
 //后台页面
 const BackStage = lazy(() => import("../pages/BackStage"))
-const Article = lazy(() => import("../pages/dashboard/Article"))
+
+//添加文章
+const Compile = lazy(() => import("../pages/dashboard/Article/Compile"))
+//文章列表
+const ArticleList = lazy(() => import("../pages/dashboard/Article/ArticleList"))
 const Category = lazy(() => import("../pages/dashboard/Category"))
 const Dashboard = lazy(() => import("../pages/dashboard/Dashboard"))
 //404
@@ -45,10 +49,8 @@ const router: RouteObject[] = [
     path: "/back",
     element: <BackStage />,
     children: [
-      {
-        path: "/back/article",
-        element: <Article />,
-      },
+      { path: "/back/list", element: <ArticleList /> },
+      { path: "/back/compile", element: <Compile /> },
       {
         path: "/back/category",
         element: <Category />,

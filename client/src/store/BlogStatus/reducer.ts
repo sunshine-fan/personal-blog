@@ -6,6 +6,9 @@ const defaultState = Map({
 export default (state=defaultState,action)=>{
   switch(action.type){
     case actionTypes.CHANGE_BLOG_LIST:
-      // return state.set("blogList",action.)
+      console.log("这里是否执行");
+      return state.set("blogList",action.blogList)
+    default:
+      return state;
   }
 }
